@@ -30,15 +30,23 @@ source venv/bin/activate
 > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```
 
-### 3. Install dependencies
+### 3. Run the setup script
+
+```bash
+python setup_env.py
+```
+
+This checks that you have Python 3.9+, installs all dependencies from `requirements.txt`, and verifies that everything imports correctly.
+
+### 4. (Optional) Manual install
+
+If you'd rather install dependencies manually instead of using the setup script:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Verify installation
-
-Run this from the project root to confirm all imports work correctly:
+Then verify imports:
 
 ```bash
 python -c "from fastapi import FastAPI; import uvicorn; from supabase import create_client, Client; from dotenv import load_dotenv; print('All imports OK')"
