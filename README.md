@@ -29,3 +29,17 @@ source venv/bin/activate
 > ```powershell
 > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 > ```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Verify installation
+
+Run this from the project root to confirm all imports work correctly:
+
+```bash
+python -c "from fastapi import FastAPI; import uvicorn; from supabase import create_client, Client; from dotenv import load_dotenv; print('All imports OK')"
+```
