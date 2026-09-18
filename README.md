@@ -81,3 +81,13 @@ SUPABASE_KEY=your-api-key
 You can find these values in your Supabase project dashboard:
 - **SUPABASE_URL** — go to **Project Settings → Data API**, under **Project URL**
 - **SUPABASE_KEY** — go to **Project Settings → API Keys**, under **Secret keys**
+
+### 6. Set up the database
+
+1. Go to your [Supabase dashboard](https://supabase.com/dashboard) and open your project.
+2. In the left sidebar, click **SQL Editor**.
+3. Click **New query**.
+4. Open the `cars.sql` file from this repo, copy its contents, and paste them into the SQL Editor.
+5. Click **Run** (or press `Ctrl + Enter`).
+
+This creates the `cars` table, enables Row Level Security, and allows public read access.
