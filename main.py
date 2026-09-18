@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from car_api.routes import router
+from routes import router
 app = FastAPI(
     title="Cars API",
     description="CRUD API powered by FastAPI + Superbase",
