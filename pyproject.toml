@@ -1,0 +1,14 @@
+[project]
+name = "car-api"
+version = "0.1.0"
+description = "CarAPI - FastAPI + Supabase backend"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi[standard]",
+    "uvicorn",
+    "supabase",
+    "python-dotenv",
+]
+
+[tool.fastapi]
+entrypoint = "main:app"
