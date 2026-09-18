@@ -91,3 +91,19 @@ You can find these values in your Supabase project dashboard:
 5. Click **Run** (or press `Ctrl + Enter`).
 
 This creates the `cars` table, enables Row Level Security, and allows public read access.
+
+### 7. Run the API
+
+Start the development server:
+
+```bash
+uv run fastapi dev
+```
+
+Once running, you should see output confirming the server is live. Open your browser and visit:
+
+- **http://127.0.0.1:8000** — should return:
+```json
+  {"message": "API is running!"}
+```
+- **http://127.0.0.1:8000/docs** — interactive Swagger UI to explore and test your endpoints
