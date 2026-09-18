@@ -1,7 +1,12 @@
 from fastapi import FastAPI
+from car_api.routes import router
+app = FastAPI(
+    title="Cars API",
+    description="CRUD API powered by FastAPI + Superbase",
+    version="1.0.0"
+)
 
-app = FastAPI()
-
+app.include_router(router, prefix="/cars", tags=["Cars"])
 @app.get("/")
-async def root():
-    return {"message" : "API is running!"}
+def health_check():
+    return {"status": "ok", "framework": "FastAPI"}
