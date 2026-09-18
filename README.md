@@ -51,3 +51,33 @@ Then verify imports:
 ```bash
 python -c "from fastapi import FastAPI; import uvicorn; from supabase import create_client, Client; from dotenv import load_dotenv; print('All imports OK')"
 ```
+
+### 5. Create your `.env` file
+
+Create a file named `.env` in the project root (this file is git-ignored and should never be committed):
+
+**Windows (Command Prompt):**
+```cmd
+type nul > .env
+```
+
+**Windows (PowerShell):**
+```powershell
+New-Item .env
+```
+
+**macOS/Linux:**
+```bash
+touch .env
+```
+
+Add your Supabase project credentials to it:
+
+```env
+SUPABASE_URL=your-project-url
+SUPABASE_KEY=your-api-key
+```
+
+You can find these values in your Supabase project dashboard:
+- **SUPABASE_URL** — go to **Project Settings → Data API**, under **Project URL**
+- **SUPABASE_KEY** — go to **Project Settings → API Keys**, under **Secret keys**
